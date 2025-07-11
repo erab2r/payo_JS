@@ -9,4 +9,9 @@ document.getElementById('btn-show-cash-out')
  })
  
  //show add money form and hide the cash out form
- 
+ document.getElementById('btn-show-add-money')
+    .addEventListener('click',function(event){
+        event.preventDefault();
+        document.getElementById('add-money-form').classList.remove('hidden');
+        document.getElementById('cash-out-form').classList.add('hidden');
+    })
