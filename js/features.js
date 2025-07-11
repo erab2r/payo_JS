@@ -7,3 +7,6 @@ document.getElementById('btn-show-cash-out')
        //hide the add money form
        document.getElementById('add-money-form').classList.add('hidden');
  })
+ 
+ //show add money form and hide the cash out form
+ 
