@@ -8,6 +8,7 @@ document.getElementById('btn-add-money')
     if(pinNumber === '1234'){
        const balance = getTextElementValueById('account-balance');
        const newBalance = addMoney + balance;
+       document.getElementById('account-balance').innerText = newBalance;
     }
     else{
        alert('Failed to add money'); 

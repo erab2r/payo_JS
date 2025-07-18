@@ -2,8 +2,8 @@ document.getElementById('btn-cash-out')
 .addEventListener('click',function(event){
    event.preventDefault();
    
-   const cashOut =  document.getElementById('input-cash-out').value;
-   const pinOut = document.getElementById('input-cash-out-pin').value;
+   const cashOut =  getInputFieldValueById('input-cash-out');
+   const pinOut = getInputFieldValueById('input-cash-out-pin');
     console.log(cashOut,pinOut);
     
     if(pinOut === '1234'){
