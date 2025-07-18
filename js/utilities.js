@@ -1,4 +1,5 @@
-console.log('utilities loaded');
-function getInputFieldValueById(){
-    console.log('Will get value by id');
+
+function getInputFieldValueById(id){
+    const inputField = document.getElementById(id).value;
+    return inputField;
 }
