@@ -1,22 +1,18 @@
 document.getElementById('btn-cash-out')
-.addEventListener('click',function(event){
-   event.preventDefault();
-   
-   const cashOut =  getInputFieldValueById('input-cash-out');
-   const pinOut = getInputFieldValueById('input-cash-out-pin');
-    console.log(cashOut,pinOut);
-    
-    if(pinOut === '1234'){
-        console.log('money reduce');
-        const balance = document.getElementById('account-balance').innerText;
-         const balanceNumber = parseFloat(balance);
-         const cashOutNumber = parseFloat(cashOut);
-         // reduce the balance
-        const newBalance = balanceNumber - cashOutNumber;
-        document.getElementById('account-balance').innerText = newBalance;
+    .addEventListener('click', function(event){
+        event.preventDefault();
 
-    }
-    else{
-        alert('Failed to cash out. Please try again later.')
-    }
+        const cashOut = getInputFieldValueById('input-cash-out');
+        const pinNumber = getInputFieldValueById('input-cash-out-pin');
+
+        if(pinNumber === 1234){
+            const balance = getTextElementValueById('account-balance');
+
+
+            const newBalance = balance - cashOut;
+            document.getElementById('account-balance').innerText = newBalance;
+        }
+        else{
+            alert('No money for you.')
+        }
 })
