@@ -5,5 +5,11 @@ document.getElementById('btn-add-money')
     const addMoney = getInputFieldValueById('input-add-money');
     const pinNumber = getInputFieldValueById('input-pin-number');
   
-    
+    if(pinNumber === '1234'){
+       const balance = getTextElementValueById('account-balance');
+       const newBalance = addMoney + balance;
+    }
+    else{
+       alert('Failed to add money'); 
+    }
 })
